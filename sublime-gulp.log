@@ -1,0 +1,136 @@
+Remember that you can report errors and get help in https://github.com/NicoSantangelo/sublime-gulp
+
+05-03-2016 10:38:
+/Users/timmaddux/Library/Application Support/Sublime Text 3/Packages/Gulp/write_tasks_to_cache.js:31
+        throw ex;
+              ^
+Error: Cannot find module 'minimatch'
+    at Function.Module._resolveFilename (module.js:336:15)
+    at Function.Module._load (module.js:278:25)
+    at Module.require (module.js:365:17)
+    at require (module.js:384:17)
+    at Object.<anonymous> (/Users/timmaddux/workspace/quizzes/modern-js-quiz-madduxTim/node_modules/gulp-watch/node_modules/chokidar/node_modules/readdirp/readdirp.js:5:18)
+    at Module._compile (module.js:460:26)
+    at Object.Module._extensions..js (module.js:478:10)
+    at Module.load (module.js:355:32)
+    at Function.Module._load (module.js:310:12)
+    at Module.require (module.js:365:17)
+
+
+05-03-2016 10:39:
+/Users/timmaddux/Library/Application Support/Sublime Text 3/Packages/Gulp/write_tasks_to_cache.js:31
+        throw ex;
+              ^
+Error: Cannot find module 'minimatch'
+    at Function.Module._resolveFilename (module.js:336:15)
+    at Function.Module._load (module.js:278:25)
+    at Module.require (module.js:365:17)
+    at require (module.js:384:17)
+    at Object.<anonymous> (/Users/timmaddux/workspace/quizzes/modern-js-quiz-madduxTim/node_modules/gulp-watch/node_modules/chokidar/node_modules/readdirp/readdirp.js:5:18)
+    at Module._compile (module.js:460:26)
+    at Object.Module._extensions..js (module.js:478:10)
+    at Module.load (module.js:355:32)
+    at Function.Module._load (module.js:310:12)
+    at Module.require (module.js:365:17)
+
+
+05-03-2016 10:44:
+/Users/timmaddux/Library/Application Support/Sublime Text 3/Packages/Gulp/write_tasks_to_cache.js:31
+        throw ex;
+              ^
+Error: Cannot find module 'minimatch'
+    at Function.Module._resolveFilename (module.js:336:15)
+    at Function.Module._load (module.js:278:25)
+    at Module.require (module.js:365:17)
+    at require (module.js:384:17)
+    at Object.<anonymous> (/Users/timmaddux/workspace/quizzes/modern-js-quiz-madduxTim/node_modules/gulp-watch/node_modules/chokidar/node_modules/readdirp/readdirp.js:5:18)
+    at Module._compile (module.js:460:26)
+    at Object.Module._extensions..js (module.js:478:10)
+    at Module.load (module.js:355:32)
+    at Function.Module._load (module.js:310:12)
+    at Module.require (module.js:365:17)
+
+
+05-03-2016 10:44:
+/Users/timmaddux/Library/Application Support/Sublime Text 3/Packages/Gulp/write_tasks_to_cache.js:31
+        throw ex;
+              ^
+Error: Cannot find module 'minimatch'
+    at Function.Module._resolveFilename (module.js:336:15)
+    at Function.Module._load (module.js:278:25)
+    at Module.require (module.js:365:17)
+    at require (module.js:384:17)
+    at Object.<anonymous> (/Users/timmaddux/workspace/quizzes/modern-js-quiz-madduxTim/node_modules/gulp-watch/node_modules/chokidar/node_modules/readdirp/readdirp.js:5:18)
+    at Module._compile (module.js:460:26)
+    at Object.Module._extensions..js (module.js:478:10)
+    at Module.load (module.js:355:32)
+    at Function.Module._load (module.js:310:12)
+    at Module.require (module.js:365:17)
+
+
+05-03-2016 10:49:
+/Users/timmaddux/Library/Application Support/Sublime Text 3/Packages/Gulp/write_tasks_to_cache.js:31
+        throw ex;
+              ^
+Error: Cannot find module 'minimatch'
+    at Function.Module._resolveFilename (module.js:336:15)
+    at Function.Module._load (module.js:278:25)
+    at Module.require (module.js:365:17)
+    at require (module.js:384:17)
+    at Object.<anonymous> (/Users/timmaddux/workspace/quizzes/modern-js-quiz-madduxTim/node_modules/gulp-watch/node_modules/chokidar/node_modules/readdirp/readdirp.js:5:18)
+    at Module._compile (module.js:460:26)
+    at Object.Module._extensions..js (module.js:478:10)
+    at Module.load (module.js:355:32)
+    at Function.Module._load (module.js:310:12)
+    at Module.require (module.js:365:17)
+
+
+05-03-2016 10:51:
+/Users/timmaddux/Library/Application Support/Sublime Text 3/Packages/Gulp/write_tasks_to_cache.js:31
+        throw ex;
+              ^
+Error: Cannot find module 'minimatch'
+    at Function.Module._resolveFilename (module.js:336:15)
+    at Function.Module._load (module.js:278:25)
+    at Module.require (module.js:365:17)
+    at require (module.js:384:17)
+    at Object.<anonymous> (/Users/timmaddux/workspace/quizzes/modern-js-quiz-madduxTim/node_modules/gulp-watch/node_modules/chokidar/node_modules/readdirp/readdirp.js:5:18)
+    at Module._compile (module.js:460:26)
+    at Object.Module._extensions..js (module.js:478:10)
+    at Module.load (module.js:355:32)
+    at Function.Module._load (module.js:310:12)
+    at Module.require (module.js:365:17)
+
+
+05-03-2016 10:52:
+/Users/timmaddux/Library/Application Support/Sublime Text 3/Packages/Gulp/write_tasks_to_cache.js:31
+        throw ex;
+              ^
+Error: Cannot find module 'minimatch'
+    at Function.Module._resolveFilename (module.js:336:15)
+    at Function.Module._load (module.js:278:25)
+    at Module.require (module.js:365:17)
+    at require (module.js:384:17)
+    at Object.<anonymous> (/Users/timmaddux/workspace/quizzes/modern-js-quiz-madduxTim/node_modules/gulp-watch/node_modules/chokidar/node_modules/readdirp/readdirp.js:5:18)
+    at Module._compile (module.js:460:26)
+    at Object.Module._extensions..js (module.js:478:10)
+    at Module.load (module.js:355:32)
+    at Function.Module._load (module.js:310:12)
+    at Module.require (module.js:365:17)
+
+
+05-03-2016 10:59:
+/Users/timmaddux/Library/Application Support/Sublime Text 3/Packages/Gulp/write_tasks_to_cache.js:31
+        throw ex;
+              ^
+Error: Cannot find module 'minimatch'
+    at Function.Module._resolveFilename (module.js:336:15)
+    at Function.Module._load (module.js:278:25)
+    at Module.require (module.js:365:17)
+    at require (module.js:384:17)
+    at Object.<anonymous> (/Users/timmaddux/workspace/quizzes/modern-js-quiz-madduxTim/node_modules/gulp-watch/node_modules/chokidar/node_modules/readdirp/readdirp.js:5:18)
+    at Module._compile (module.js:460:26)
+    at Object.Module._extensions..js (module.js:478:10)
+    at Module.load (module.js:355:32)
+    at Function.Module._load (module.js:310:12)
+    at Module.require (module.js:365:17)
