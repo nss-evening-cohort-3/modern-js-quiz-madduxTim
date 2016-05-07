@@ -4,10 +4,65 @@
     <title>Robots!</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="quiz.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron|VT323' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    
+    <article id="p1_view" class="col-md-12">
+        <h2>Ready Player 1</h2>
+        <section id="p1Input">
+            <div id="p1Button" class="btn btn-primary">Build Player 1</div>
+            <p>Start Building your Death-Bot</p>
+            <section class="robotChoice">
+            </section>
+            <section class="weaponChoice"></section>
+            </section>
+            <section class="modificationChoice">
+            </section>  
+        </section>
+    </article>
+    <article id="p2_view" class="col-md-12">
+        <h2>Ready Player 2</h2>
+        <section id="p2Input">
+            <div id="p2Button" class="btn btn-primary">Build Player 2</div>
+            <p>Start Building your Death-Bot</p>
+            <section class="robotChoice">
+            </section>
+            <section class="weaponChoice"></section>
+            </section>
+            <section class="modificationChoice">
+            </section> 
+        </section>  
+    </article>
+    <article id="battleField">
+    </article>
+
+    <!-- BATTLE READY MODAL -->
+    <div class="modal fade" id="battleReadyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">ARE THESE THE DROIDS YOU'RE LOOKING FOR?</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="player2Stats"></p>
+                    <p id="player1Stats"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="resetButton" class="btn btn-default" data-dismiss="modal">START OVER</button>
+                    <button type="button" id="toBattleButton" class="btn btn-default" data-dismiss="modal">LET'S DO THIS!!!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js_files/quiz.js"></script>
+    <script type="text/javascript" src="../js_files/app.js"></script>
+    <script type="text/javascript" src="../js_files/app2.js"></script>
+    <script type="text/javascript" src="../js_files/build.js"></script>
+    <script type="text/javascript" src="../js_files/mods.js"></script>
+    <script type="text/javascript" src="../js_files/weapons.js"></script>
+    <script type="text/javascript" src="../js_files/fight.js"></script>
 </body>
 </html>

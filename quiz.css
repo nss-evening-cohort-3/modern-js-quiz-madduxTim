@@ -1,0 +1,41 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+}
+
+#p1_view {
+    background-color: lightblue;
+    min-height: 200px;
+    text-align: center;
+}
+
+#p2_view {
+    background-color: orange;
+    min-height: 200px;
+    text-align: center;
+}
+
+.btn {
+    width: 150px;
+    margin: 1%;
+}
+
+#toBattleButton {
+    background-color: lightblue;
+}
+
+#resetButton {
+    background-color: orange;
+    float: left;
+}
+
+#player2Stats {
+    float: right;
+}
+
+#player1Stats {
+    float: left;
+}
+
+.modal-footer {
+    clear: both;
+}
