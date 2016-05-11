@@ -1,7 +1,9 @@
+/* - - - - - ELEMENT STYLINGS - - - - - */
 body {
     font-family: 'Orbitron', sans-serif;
 }
 
+/* - - - - - ID STYLINGS - - - - - */
 #p1_view {
     background-color: lightblue;
     min-height: 200px;
@@ -14,11 +16,6 @@ body {
     text-align: center;
 }
 
-.btn {
-    width: 150px;
-    margin: 1%;
-}
-
 #toBattleButton {
     background-color: lightblue;
 }
@@ -27,6 +24,13 @@ body {
     background-color: orange;
     float: left;
 }
+
+/* - - - - - CLASS STYLINGS - - - - - */
+.btn {
+    width: 150px;
+    margin: 1%;
+}
+
 
 .round {
     margin-top: 30px;
@@ -40,7 +44,7 @@ body {
 .newRoundInfo {
     text-align: center;
     border: 5px groove gold;
-    height: 225px;
+    height: 245px;
     font-family: 'VT323', sans-serif;
     font-size: 1.3em;
 }

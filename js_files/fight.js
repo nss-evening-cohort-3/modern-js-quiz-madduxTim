@@ -13,7 +13,7 @@ var RobotFight = (function(originalRobotFight){
         $("#fightBtn").click(function(){
             p1Damage.push(Math.floor(Math.random()*20) + playerObj.player1.weapon.power);
             p2Damage.push(Math.floor(Math.random()*20) + playerObj.player2.weapon.power);
-            $("#battleLog").append(`<div id="round${[roundCounter]}" class='col-md-4 newRoundInfo'>Round ${[roundCounter]}</div>`)
+            $("#battleLog").append(`<div id="round${[roundCounter]}" class='col-md-4 newRoundInfo'>Round ${[roundCounter]}</div>`);
             calculateEvade();
             calculateRepair();
             calculateCriticalStrike();
@@ -29,12 +29,12 @@ var RobotFight = (function(originalRobotFight){
             if (evadeAbility1 > 7) {
                 p2Damage[roundCounter-1] = p2Damage[roundCounter-1] / 2;
                 $(`#round${[roundCounter]}`).append("<div class='evadeAlert'>Player 1 dodges, taking half the damage!</div>");
-            };
+            }
             if (evadeAbility2 > 7) {
                 p1Damage[roundCounter-1] = p1Damage[roundCounter-1] / 2;
                 $(`#round${[roundCounter]}`).append("<div class='evadeAlert'>Player 2 dodges, taking half the damage!</div>");                
-            };
-        };
+            }
+        }
 
             // - - - - - - - - - PLAYER GETS 1 / 10** CHANCE OF TRIPLING DAMAGE - - - - - - - - - - //
                  // - - - - - - - **INCREASES BASED ON CHOICE OF MODIFICATION - - - - - - - - //
@@ -44,15 +44,15 @@ var RobotFight = (function(originalRobotFight){
             if (player1CriticalStrike >= 91) {
                 p1Damage[roundCounter-1] * 3;
                 $(`#round${[roundCounter]}`).append("<div class='evadeAlert'>Player 1 lands a critical strike!</div>");
-            };
+            }
             if (player2CriticalStrike >= 91) {
                 p2Damage[roundCounter-1] * 3;
                 $(`#round${[roundCounter]}`).append("<div class='evadeAlert'>Player 2 lands a critical strike!</div>");
-            };
+            }
             // - - - - - - - - SUB DAMAGE FROM LIFE AFTER EVADE & CRIT-STRIKE ARE CALC'D - - - - - - - - //
             playerObj.player1.life -= Math.round(p2Damage[roundCounter-1]);
             playerObj.player2.life -= Math.round(p1Damage[roundCounter-1]);
-        };
+        }
 
         // - - - - - USE A_I AND REPAIR ABILITY TO CALC REPAIR EVERY ROUND - - - - // 
         function calculateRepair() {
@@ -73,7 +73,7 @@ var RobotFight = (function(originalRobotFight){
             $(`#round${[roundCounter]}`).append("<p>Player 2 Attack Strength = "+p2Damage[roundCounter-1]+"</p>");
             $(`#round${[roundCounter]}`).append("<p>Player 1 Remaining Health = "+playerObj.player1.life+"</p>");
             $(`#round${[roundCounter]}`).append("<p>Player 2 Remaining Health = "+playerObj.player2.life+"</p>");
-        };
+        }
 
         // - - - - - - WANTED TO ANNOUNCE A WINNER VIA MODAL - - - - - - - //
         // - - - -  BUT I HAVE TO MOVE ON TO SOMETHING FOR A BIT - - - - - //
@@ -85,7 +85,7 @@ var RobotFight = (function(originalRobotFight){
             } else if (playerObj.player1.life <= 0) {
                 alert("Player 1 is dead!");
             }
-        };
+        }
 
     }); 
     return originalRobotFight;
