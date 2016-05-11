@@ -2,14 +2,11 @@
 var RobotFight = (function(originalRobotFight){
     $(document).ready(function() {  
 
-// --------------------- THESE TWO FUNCTIONS ARE FUNCTIONALITY FOR BUILDING A BOT ------------------- //
-       
-
-       // ------------- UNCOMMENT WHEN READY TO WORK AGAIN ------------ //
+        // - - - - - - - - - - FUNCTIONALITY FOR BUILDING BOTH BOTS - - - - - - - - - - //
         let playerObj = {};
         let player1build = true;
 
-        originalRobotFight.player1Setup = (function() {
+        let player1Setup = (function() {
             $("#p1Button").click(function(){        
                 $(".robotType").click(function(event){
                     if (player1build === true) {
@@ -29,7 +26,7 @@ var RobotFight = (function(originalRobotFight){
             });
         })(); 
 
-        originalRobotFight.player2Setup = (function() {
+        let player2Setup = (function() {
             $("#p2Button").click(function(){
                 player1build = false;
                 $(".robotType").click(function(event){
@@ -45,9 +42,13 @@ var RobotFight = (function(originalRobotFight){
             });
         })(); 
 
-// --------------------- THIS IS FOR ADDING CONTENT TO THE MODAL BEFORE BATTLE  ------------------- //
-        
-        $("#resetButton").click(function(e) {
+        // - - - - - - - GETTER TO MAKE PLAYEROBJ ACCESSIBLE IN OTHER IIFES - - - - - // 
+        originalRobotFight.playerObjGetter = function() {
+            return playerObj;
+        }
+
+        // - - - - - - PRE-FIGHT MODAL CONTENT: RELOAD OR CONTINUE TO FIGHT - - - - - - - //
+        $("#resetButton").click(function() {
             location.reload(true);
         });
 
@@ -55,30 +56,28 @@ var RobotFight = (function(originalRobotFight){
             $("#battleField").show();
         });
 
-        // YOU NEED TO DRY THIS OUT - FOR IN LOOP? 
+        // - - - - - - PUSH PLAYER STATS TO MODAL FOR INSPECTION PRE-FIGHT - - - - - - - - //
         function postPreStatsToModal() {
-            $("#player1Stats").append("<div>"+playerObj.player1.name+"</div>");
-            $("#player1Stats").append("<div>"+playerObj.player1.weapon.name+"</div>");
-            $("#player1Stats").append("<div>"+playerObj.player1.modification.name+"</div>");
-            $("#player1Stats").append("<div>"+playerObj.player1.life+"</div>");
-            $("#player1Stats").append("<div>"+playerObj.player1.a_i+"</div>");
-            $("#player1Stats").append("<div>"+playerObj.player1.armor+"</div>");
-            $("#player1Stats").append("<div>"+playerObj.player1.evade+"</div>");
+            $("#player1Stats").append("<div>Player 1 = "+playerObj.player1.name+"</div>");
+            $("#player1Stats").append("<div>Weapon = "+playerObj.player1.weapon.name+"</div>");
+            $("#player1Stats").append("<div>Modification = "+playerObj.player1.modification.name+"</div>");
+            $("#player1Stats").append("<div>Beginning Health = "+playerObj.player1.life+"</div>");
+            $("#player1Stats").append("<div>A. Intelligence = "+playerObj.player1.a_i+"</div>");
+            $("#player1Stats").append("<div>Armor = "+playerObj.player1.armor+"</div>");
+            $("#player1Stats").append("<div>Evade = "+playerObj.player1.evade+"</div>");
 
-            $("#player2Stats").append("<div>"+playerObj.player2.name+"</div>");
-            $("#player2Stats").append("<div>"+playerObj.player2.weapon.name+"</div>");
-            $("#player2Stats").append("<div>"+playerObj.player2.modification.name+"</div>");
-            $("#player2Stats").append("<div>"+playerObj.player2.life+"</div>");
-            $("#player2Stats").append("<div>"+playerObj.player2.a_i+"</div>");
-            $("#player2Stats").append("<div>"+playerObj.player2.armor+"</div>");
-            $("#player2Stats").append("<div>"+playerObj.player2.evade+"</div>");
+            $("#player2Stats").append("<div>Player 2 = "+playerObj.player2.name+"</div>");
+            $("#player2Stats").append("<div>Weapon = "+playerObj.player2.weapon.name+"</div>");
+            $("#player2Stats").append("<div>Modification = "+playerObj.player2.modification.name+"</div>");
+            $("#player2Stats").append("<div>Beginning Health = "+playerObj.player2.life+"</div>");
+            $("#player2Stats").append("<div>A. Intelligence = "+playerObj.player2.a_i+"</div>");
+            $("#player2Stats").append("<div>Armor = "+playerObj.player2.armor+"</div>");
+            $("#player2Stats").append("<div>Evade = "+playerObj.player2.evade+"</div>");
         };
 
-// --------------------- THIS IS THE FIGHT BUTTON AND FIGHT LOGIC ----------------------------- //
 
-
-// --------------------- TEMPORARILY BUILDING ROBOTS SO CAN FUCK WITH FIGHT LOGIC ------------------- //
-        // let playerObj = {};
+// - - - - - - - - - - - - UNCOMMENT THIS TO SKIP STRAIGHT TO FIGHT FUNCTIONALITY - - - - - - - - //
+        
         // $(document).ready(function(){
         //     playerObj.player1 = new originalRobotFight.Robots.Drone();
         //     playerObj.player1.weapon = new originalRobotFight.Armory.ScrewDriver();
@@ -86,36 +85,10 @@ var RobotFight = (function(originalRobotFight){
 
         //     playerObj.player2 = new originalRobotFight.Robots.ATV();
         //     playerObj.player2.weapon = new originalRobotFight.Armory.Rockets();
-        //     playerObj.player2.modification = new originalRobotFight.ModBag.NightVision();
+        //     playerObj.player2.modification = new originalRobotFight.ModBag.JetPack();
+        //     console.log(playerObj.player1.life, playerObj.player2.life);
         // }); 
 
-// --------------------- TEMPORARILY BUILDING ROBOTS SO CAN TINKER WITH FIGHT LOGIC ------------------- //
-
-        let roundCounter = 1;
-        let roundArray = []; // <----------- PUSH ROUND INFORMATION TO THIS ARRAY AND THEN DISPLAY EACH INDEX AS A ROUND????
-        $(document).load($("#battleField").append("<div id='fightBtn' class='btn btn-primary'>Fight</div>"));
-        
-        $("#fightBtn").click(function(){
-            playerObj.player1.life = playerObj.player1.life - playerObj.player2.weapon.power;
-            playerObj.player2.life = playerObj.player2.life - playerObj.player1.weapon.power;
-            $("#battleField").append("<p>Player 1 Health = "+playerObj.player1.life+"</p>");
-            $("#battleField").append("<p>Player 1 Weapon Strength = "+playerObj.player1.weapon.power+"</p>");
-            $("#battleField").append("<p>Player 2 Health = "+playerObj.player2.life+"</p>");
-            $("#battleField").append("<p>Player 2 Weapon Strength = "+playerObj.player2.weapon.power+"</p>");
-            $("#battleField").append("<p> Round "+roundCounter+"</p>");
-            roundCounter++;
-            winnerTest();
-        });
-
-        function winnerTest() {
-            if (playerObj.player1.life <= 0 || playerObj.player2.life <= 0) {
-                if (playerObj.player1.life <= 0) {
-                    alert("Player 1 is dead!");
-                } else if (playerObj.player2.life <= 0) {
-                    alert("Player 2 is dead!");
-                }
-            }
-        }
     });
     return originalRobotFight;
 })(RobotFight || {});

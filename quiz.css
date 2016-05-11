@@ -28,14 +28,19 @@ body {
     float: left;
 }
 
-#player2Stats {
-    float: right;
+.round {
+    margin-top: 30px;
+    color: red;
 }
 
-#player1Stats {
-    float: left;
+.evadeAlert {
+    color: red;
 }
 
-.modal-footer {
-    clear: both;
+.newRoundInfo {
+    text-align: center;
+    border: 5px groove gold;
+    height: 225px;
+    font-family: 'VT323', sans-serif;
+    font-size: 1.3em;
 }

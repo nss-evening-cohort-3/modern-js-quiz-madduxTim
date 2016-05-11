@@ -11,7 +11,6 @@
         <h2>Ready Player 1</h2>
         <section id="p1Input">
             <div id="p1Button" class="btn btn-primary">Build Player 1</div>
-            <p>Start Building your Death-Bot</p>
             <section class="robotChoice">
             </section>
             <section class="weaponChoice"></section>
@@ -24,7 +23,6 @@
         <h2>Ready Player 2</h2>
         <section id="p2Input">
             <div id="p2Button" class="btn btn-primary">Build Player 2</div>
-            <p>Start Building your Death-Bot</p>
             <section class="robotChoice">
             </section>
             <section class="weaponChoice"></section>
@@ -34,9 +32,11 @@
         </section>  
     </article>
     <article id="battleField">
+        <div id='fightBtn' class='btn btn-primary'>Fight</div>
+        <section id="battleLog"></section>
     </article>
 
-    <!-- BATTLE READY MODAL -->
+    <!-- 'BATTLE READY' MODAL -->
     <div class="modal fade" id="battleReadyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -44,13 +44,10 @@
                     <h4 class="modal-title" id="myModalLabel">ARE THESE THE DROIDS YOU'RE LOOKING FOR?</h4>
                 </div>
                 <div class="modal-body">
-                    <p id="player2Stats"></p>
-                    <p id="player1Stats"></p>
-                </div>
-                <div class="modal-footer">
+                    <p id="player1Stats" class="col-md-6"></p>
+                    <p id="player2Stats" class="col-md-6"></p>
                     <button type="button" id="resetButton" class="btn btn-default" data-dismiss="modal">START OVER</button>
                     <button type="button" id="toBattleButton" class="btn btn-default" data-dismiss="modal">LET'S DO THIS!!!</button>
-                </div>
             </div>
         </div>
     </div>
