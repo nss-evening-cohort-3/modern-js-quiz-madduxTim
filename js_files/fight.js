@@ -34,6 +34,8 @@ var RobotFight = (function(originalRobotFight){
                 p1Damage[roundCounter-1] = p1Damage[roundCounter-1] / 2;
                 $(`#round${[roundCounter]}`).append("<div class='evadeAlert'>Player 2 dodges, taking half the damage!</div>");                
             }
+            console.log("p1Damage:", p1Damage);
+            console.log("p2Damage:", p2Damage);
         }
 
             // - - - - - - - - - PLAYER GETS 1 / 10** CHANCE OF TRIPLING DAMAGE - - - - - - - - - - //
@@ -42,11 +44,11 @@ var RobotFight = (function(originalRobotFight){
             let player1CriticalStrike = (Math.floor(Math.random()*100) + playerObj.player1.modification.criticalStrike);
             let player2CriticalStrike = (Math.floor(Math.random()*100) + playerObj.player2.modification.criticalStrike);
             if (player1CriticalStrike >= 91) {
-                p1Damage[roundCounter-1] * 3;
+                p1Damage[roundCounter-1] = p1Damage[roundCounter-1] * 3;
                 $(`#round${[roundCounter]}`).append("<div class='evadeAlert'>Player 1 lands a critical strike!</div>");
             }
             if (player2CriticalStrike >= 91) {
-                p2Damage[roundCounter-1] * 3;
+                p2Damage[roundCounter-1] = p2Damage[roundCounter-1] * 3;
                 $(`#round${[roundCounter]}`).append("<div class='evadeAlert'>Player 2 lands a critical strike!</div>");
             }
             // - - - - - - - - SUB DAMAGE FROM LIFE AFTER EVADE & CRIT-STRIKE ARE CALC'D - - - - - - - - //
