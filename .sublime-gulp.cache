@@ -1,0 +1,1 @@
+{"/Users/timmaddux/workspace/quizzes/modern-js-quiz-madduxTim/gulpfile.js":{"sha1":"251b3948fe3a749dc431658bf669c8f50924587f","tasks":{"default":{"name":"default","dependencies":"lint watch"},"watch":{"name":"watch","dependencies":""},"lint":{"name":"lint","dependencies":""}}}}
